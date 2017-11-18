@@ -1,0 +1,16 @@
+name: lando-beanstalkd
+recipe: custom
+config:
+  webroot: .
+services:
+  node:
+    type: node:6.11
+    build: "cd $LANDO_MOUNT && npm install"
+tooling:
+  node:
+    service: node
+    description: "Run arbitrary node commands"
+  npm:
+    service: node
+    description: "Run arbitrary npm commands"
+

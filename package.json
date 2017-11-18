@@ -1,0 +1,11 @@
+{
+  "name": "lando-beanstalkd",
+  "version": "0.0.1",
+  "description": "A beanstalkd service for Lando",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo heyyy"
+  },
+  "author": "Coby Tamayo <ctamayo@sitecrafting.com>",
+  "license": "MIT"
+}
