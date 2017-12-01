@@ -22,7 +22,7 @@ services:
     type: beanstalkd
 ```
 
-Running `lando start` will start a `beanstalkd` server listening on port 11300 inside your default `appserver` container. Use any [client library](https://github.com/kr/beanstalkd/wiki/client-libraries) within your main app to talk to it (most libraries know to look at 11300 by default).
+Running `lando start` will start a `beanstalkd` server listening on port 11300 inside your default `appserver` container. Use any [client library](https://github.com/kr/beanstalkd/wiki/client-libraries) within your main app to talk to it (most libraries know to look at 11300 by default). Just configure the client code with hostname `queue` (or whatever you decide to name your service in .lando.yml).
 
 ## Options
 
