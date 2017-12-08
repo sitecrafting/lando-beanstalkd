@@ -1,16 +1,29 @@
 /**
- * I see your ridiculous example, and I raise you one ridiculous plugin.
+ * Load beanstalkd, beanstalkd-console, and beanstalk-cli services
  *
- * https://docs.devwithlando.io/dev/plugins.html
- * @name example-plugin
+ * https://github.com/sitecrafting/lando-beanstalkd
+ * @name lando-beanstalkd
  */
 
 'use strict';
 
 module.exports = function(lando) {
 
-  lando.events.on('post-bootstrap', 3, function addBeanstalk(lando) {
-    lando.services.add('beanstalkd', require('./lib/services')(lando));
+  // inject our beanstalk-related services
+  lando.events.on('post-bootstrap', 3, function addBeanstalkServices(lando) {
+    // defaults shared between services
+    var defaults = {
+      BEANSTALKD_PORT: 11300,
+    };
+
+    lando.services.add(
+      'beanstalkd',
+      require('./lib/beanstalkd')(lando, defaults)
+    );
+    lando.services.add(
+      'beanstalkd_console',
+      require('./lib/console')(lando, defaults)
+    );
   });
 
 };
