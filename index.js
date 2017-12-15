@@ -14,6 +14,7 @@ module.exports = function(lando) {
     // defaults shared between services
     var defaults = {
       BEANSTALKD_PORT: 11300,
+      CONSOLE_HTTP_PORT: 2080,
     };
 
     lando.services.add(
