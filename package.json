@@ -4,8 +4,12 @@
   "description": "A beanstalkd service for Lando",
   "main": "index.js",
   "scripts": {
-    "test": "echo heyyy"
+    "test": "mocha"
   },
   "author": "Coby Tamayo <ctamayo@sitecrafting.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
 }
