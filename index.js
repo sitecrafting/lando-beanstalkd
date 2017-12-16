@@ -21,9 +21,15 @@ module.exports = function(lando) {
       'beanstalkd',
       require('./lib/beanstalkd')(lando, defaults)
     );
+
     lando.services.add(
       'beanstalkd_console',
       require('./lib/console')(lando, defaults)
+    );
+
+    lando.services.add(
+      'beanstalkd_cli',
+      require('./lib/cli')(lando, defaults)
     );
   });
 
