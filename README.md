@@ -56,5 +56,4 @@ If an integer is specified, this forwards the port on your host machine to `port
 
 * unit tests
 * more `beanstalkd` options
-* option for injecting/exposing a (working) [`beanstalkd-console`](https://github.com/ptrofimov/beanstalk_console) service
-* expose  [`beanstalkd-cli`](https://github.com/schickling/beanstalkd-cli) tooling
+* document `beanstalkd_console` and `beanstalkd_cli` services
